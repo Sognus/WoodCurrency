@@ -18,14 +18,14 @@ public final class EconomyUtils {
 
 	public EconomyUtils(WoodCurrency plugin) {
 		this.plugin = plugin;
-		RegisteredServiceProvider<Economy> economyProvider = Bukkit.getServer().getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
+		RegisteredServiceProvider<Economy> economyProvider = Bukkit.getServer().getServicesManager().getRegistration(Economy.class);
 		if (economyProvider == null) {
-			this.plugin.disable("Can't get Vault economy hook.");
+			this.plugin.disable("Can't get Vault economy provider.");
 			return;
 		}
 		eco = economyProvider.getProvider();
 		if (eco == null) {
-			this.plugin.disable("Can't get Vault economy hook.()");
+			this.plugin.disable("Can't get Vault economy hook.");
 		}
 	}
 

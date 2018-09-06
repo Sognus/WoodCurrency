@@ -4,12 +4,12 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<build.number>SNAPSHOT</build.number>
+		<build.number>0</build.number>
 	</properties>
 
 	<groupId>eu.sidzej</groupId>
 	<artifactId>wc</artifactId>
-	<version>1.0-${build.number}</version>
+	<version>1.0.${build.number}</version>
 	<name>WoodCurrency</name>
 	<description>Simple adminshop with limits</description>
 
@@ -20,7 +20,7 @@
         </repository>
 		<repository>
 			<id>vault-repo</id>
-			<url>http://nexus.theyeticave.net/content/repositories/pub_releases</url>
+			<url>http://nexus.hc.to/content/repositories/pub_releases</url>
 		</repository>
 	</repositories>
 
@@ -28,14 +28,14 @@
 		<dependency>
 			<groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.9-R0.1-SNAPSHOT</version>
+			<version>1.13-R0.1-SNAPSHOT</version>
 
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>net.milkbowl.vault</groupId>
 			<artifactId>VaultAPI</artifactId>
-			<version>1.5</version>
+			<version>1.6</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>

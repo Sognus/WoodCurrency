@@ -1,5 +1,6 @@
 package eu.sidzej.wc;
 
+import eu.sidzej.wc.utils.Log;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.block.Block;

@@ -2,6 +2,7 @@ package eu.sidzej.wc.inventory;
 
 import java.util.HashMap;
 
+import eu.sidzej.wc.utils.Log;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
@@ -34,9 +35,12 @@ public class WCInventory {
 	public boolean hasItemStack(ItemStack item){
 		for (ItemStack is : i.getContents()) {
 			if(is == null) continue;
+			Log.debug("WCInventory:38 - " + item.toString());
 			if (is.isSimilar(item))
+				Log.debug("WCInventory:38 - TRUE");
 				return true;
 		}
+		Log.debug("WCInventory:38 - FALSE");
 		return false;
 	}
 

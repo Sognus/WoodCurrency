@@ -30,10 +30,13 @@ public class BlockUtils {
 
 	public static ItemStack getItemStack(String s) {
 		TreeSpecies t = getTree(s);
-		if (t == null)
+		if (t == null) {
 			return null;
+		}
 		else
+		{
 			return t.toItemStack();
+		}
 	}
 
 	public static int getItemStackId(String s) {
@@ -65,20 +68,27 @@ public class BlockUtils {
 			return null;
 		}
 
-		if (type.equals("oak"))
+		if (type.equals("oak")) {
 			out = TreeSpecies.OAK;
-		else if (type.equals("birch"))
-			out = TreeSpecies.BIRCH;
-		else if (type.equals("spruce"))
+		}
+		else if (type.equals("birch")) {
+				out = TreeSpecies.BIRCH;
+		}
+		else if (type.equals("spruce")) {
 			out = TreeSpecies.SPRUCE;
-		else if (type.equals("acacia"))
+		}
+		else if (type.equals("acacia")) {
 			out = TreeSpecies.ACACIA;
-		else if (type.equals("darkoak"))
-			out = TreeSpecies.DARK;
-		else if (type.equals("jungle"))
+		}
+		else if (type.equals("darkoak")) {
+				out = TreeSpecies.DARK;
+		}
+		else if (type.equals("jungle")) {
 			out = TreeSpecies.JUNGLE;
-		else
+		}
+		else {
 			return null;
+		}
 
 		return out;
 	}

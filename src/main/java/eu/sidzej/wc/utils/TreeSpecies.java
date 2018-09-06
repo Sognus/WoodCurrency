@@ -21,28 +21,29 @@ public enum TreeSpecies {
 
 		public ItemStack toItemStack(int amount) {
 			ItemStack stack = null;
-			if(this.equals(ACACIA) || this.equals(DARK))
-				stack = new ItemStack(Material.LOG_2,amount);
-			else
-				stack = new ItemStack(Material.LOG,amount);
-			
-			switch(this){
-				case JUNGLE:
-					stack.setDurability((short)3);
+
+			switch(this)
+			{
+				case OAK:
+					stack = new ItemStack(Material.OAK_LOG);
 					break;
 				case BIRCH:
-					stack.setDurability((short)2);
-					break;				
-				case SPRUCE:
-				case DARK:
-					stack.setDurability((short)1);
-					break;				
-				case ACACIA:
-				case OAK:
-				default:
-					stack.setDurability((short)0);
+					stack = new ItemStack(Material.BIRCH_LOG);
 					break;
-			}	
+				case SPRUCE:
+					stack = new ItemStack(Material.SPRUCE_LOG);
+					break;
+				case JUNGLE:
+					stack = new ItemStack(Material.JUNGLE_LOG);
+					break;
+				case DARK:
+					stack = new ItemStack(Material.DARK_OAK_LOG);
+					break;
+				case ACACIA:
+					stack = new ItemStack(Material.ACACIA_LOG);
+					break;
+			}
+			stack.setAmount(amount);
 			return stack;
 		}
 }
